@@ -50,7 +50,7 @@
       //                                      | TAB | SPC | L1  |   | L4  | BKS | ESC |
       bindings = <
         &kp LS(Q)        &kp LS(W)     &kp LS(E)      &kp RBKT       &kp RBRC  &kp LBKT  &kp DQT        &kp SQT        &kp MINUS       &kp EQUAL
-        &pht LSHIFT EXCL &pht LCTRL AT &pht LALT HASH &pht LGUI DLLR &kp PRCNT &kp CARET &pht LGUI AMPS &pht LALT STAR &pht LCTRL LPAR &pht LSHIFT RPAR
+        &pht LSHIFT EXCL &pht LCTRL AT &pht LALT HASH &pht LGUI DLLR &kp PRCNT &kp CARET &pht RGUI AMPS &pht RALT STAR &pht RCTRL LPAR &pht RSHIFT RPAR
         &kp LS(Z)        &none         &none          &none          &none     &kp LBRC  &kp GRAVE      &kp TILDE      &kp UNDER       &kp PLUS
                                        &trans         &trans         &trans    &trans    &trans         &trans
       >;
@@ -65,7 +65,7 @@
       //                                      | TAB | SPC | L3  |   | L4  | BKS | ESC |
       bindings = <
         &kp SQT       &kp COMMA    &kp DOT     &kp P       &kp Y     &kp F     &kp G       &kp C       &kp R        &kp L
-        &pht LSHIFT A &pht LCTRL O &pht LALT E &pht LGUI U &kp I     &kp D     &pht LGUI H &pht LALT T &pht LCTRL N &pht LSHIFT S
+        &pht LSHIFT A &pht LCTRL O &pht LALT E &pht LGUI U &kp I     &kp D     &pht RGUI H &pht RALT T &pht RCTRL N &pht RSHIFT S
         &kp SEMI      &kp Q        &kp J       &kp K       &kp X     &kp B     &kp M       &kp W       &kp V        &kp Z
                                    &kp TAB     &kp SPACE   &lt 4 RET &lt 3 RET &kp BKSP    &kp ESC
       >;
@@ -80,7 +80,7 @@
       //                                      | TAB | SPC | L3  |   | L4  | BKS | ESC |
       bindings = <
         &kp DQT          &kp LT        &kp GT         &kp EQUAL      &kp PLUS  &kp SLASH &kp UNDER      &kp MINUS      &kp LBKT        &kp RBKT
-        &pht LSHIFT EXCL &pht LCTRL AT &pht LALT HASH &pht LGUI DLLR &kp PRCNT &kp CARET &pht LGUI AMPS &pht LALT STAR &pht LCTRL LPAR &pht LSHIFT RPAR
+        &pht LSHIFT EXCL &pht LCTRL AT &pht LALT HASH &pht LGUI DLLR &kp PRCNT &kp CARET &pht RGUI AMPS &pht RALT STAR &pht RCTRL LPAR &pht RSHIFT RPAR
         &kp COLON        &none         &none          &none          &none     &kp LBRC  &kp GRAVE      &kp TILDE      &kp UNDER       &kp PLUS
                                        &trans         &trans         &trans    &trans    &trans         &trans
       >;
@@ -94,10 +94,10 @@
       //                          |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
       //                                      | TAB | SPC |     |   |     | BKS | ESC |
       bindings = <
-        &none        &none        &none        &none        &none        &none   &none     &kp UP    &none      &none
-        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none   &kp LEFT  &kp DOWN  &kp RIGHT  &none
-        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6  &kp N7    &kp N8    &kp N9     &kp N0
-                                  &trans       &trans       &trans       &trans  &trans    &trans
+        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none   &none          &kp UP         &none            &none
+        &kp LSHIFT   &kp LCTRL    &kp LALT     &kp LGUI     &none        &none   &pht RGUI LEFT &pht RALT DOWN &pht RCTRL RIGHT &pht RSHIFT CAPS
+        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6  &kp N7         &kp N8         &kp N9           &kp N0
+                                  &trans       &trans       &trans       &trans  &trans         &trans
       >;
     };
   };
