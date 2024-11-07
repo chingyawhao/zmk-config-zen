@@ -62,12 +62,12 @@
       //                          |  '  |  ,  |  .  |  P  |  Y  |   |  F  |  G  |  C  |  R  |  L  |
       //                          |  A  |  O  |  E  |  U  |  I  |   |  D  |  H  |  T  |  N  |  S  |
       //                          |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  |
-      //                                      | TAB | SPC | L3  |   | L4  | BKS | ESC |
+      //                                      | TAB | SPC | L3  |   | L5  | BKS | ESC |
       bindings = <
         &kp SQT       &kp COMMA    &kp DOT     &kp P       &kp Y     &kp F     &kp G       &kp C       &kp R        &kp L
         &pht LSHIFT A &pht LCTRL O &pht LALT E &pht LGUI U &kp I     &kp D     &pht RGUI H &pht RALT T &pht RCTRL N &pht RSHIFT S
         &kp SEMI      &kp Q        &kp J       &kp K       &kp X     &kp B     &kp M       &kp W       &kp V        &kp Z
-                                   &kp TAB     &kp SPACE   &lt 4 RET &lt 3 RET &kp BKSP    &kp ESC
+                                   &kp TAB     &kp SPACE   &lt 3 RET &lt 5 RET &kp BKSP    &kp ESC
       >;
     };
 
@@ -77,7 +77,7 @@
       //                          |  "  |  <  |  >  |  =  |  +  |   |  /  |  _  |  -  |  [  |  ]  |
       //                          |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
       //                          |  :  |     |     |     |     |   |  ?  |  `  |  ~  |  {  |  }  |
-      //                                      | TAB | SPC | L3  |   | L4  | BKS | ESC |
+      //                                      | TAB | SPC | L3  |   | L5  | BKS | ESC |
       bindings = <
         &kp DQT          &kp LT        &kp GT         &kp EQUAL      &kp PLUS  &kp SLASH &kp UNDER      &kp MINUS      &kp LBKT        &kp RBKT
         &pht LSHIFT EXCL &pht LCTRL AT &pht LALT HASH &pht LGUI DLLR &kp PRCNT &kp CARET &pht RGUI AMPS &pht RALT STAR &pht RCTRL LPAR &pht RSHIFT RPAR
@@ -86,18 +86,33 @@
       >;
     };
 
-    number_arrow {
+    qwerty_number {
       label = "NUMBER";
       //                          -----------------------------------------------------------------
-      //                          |     |     |     |     |     |   |     |     |  ↑  |     |     |
-      //                          | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |  ←  |  ↓  |  →  |     |
+      //                          | BT1 | BT2 | BT3 | BT4 | BT5 |   | L2  |     |  ↑  |     |     |
+      //                          |     |     |     |     |     |   |     |  ←  |  ↓  |  →  |     |
       //                          |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
       //                                      | TAB | SPC |     |   |     | BKS | ESC |
       bindings = <
-        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none   &none          &kp UP         &none            &none
+        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &to 2   &none          &kp UP         &none            &none
         &kp LSHIFT   &kp LCTRL    &kp LALT     &kp LGUI     &none        &none   &pht RGUI LEFT &pht RALT DOWN &pht RCTRL RIGHT &pht RSHIFT CAPS
         &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6  &kp N7         &kp N8         &kp N9           &kp N0
                                   &trans       &trans       &trans       &trans  &trans         &trans
+      >;
+    };
+
+    dvorak_number {
+      label = "NUMBER";
+      //                          -----------------------------------------------------------------
+      //                          | BT1 | BT2 | BT3 | BT4 | BT5 |   | L0  |     |  ↑  |     |     |
+      //                          |     |     |     |     |     |   |     |  ←  |  ↓  |  →  |     |
+      //                          |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
+      //                                      | TAB | SPC |     |   |     | BKS | ESC |
+      bindings = <
+        &trans   &trans   &trans   &trans   &trans   &to 0    &trans   &trans   &trans   &trans
+        &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
+        &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
+                          &trans   &trans   &trans   &trans   &trans   &trans
       >;
     };
   };
