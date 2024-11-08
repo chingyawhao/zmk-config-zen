@@ -46,12 +46,12 @@
       //                          -----------------------------------------------------------------
       //                          |  Q  |  W  |  E  |  ]  |  }  |   |  [  |  "  |  '  |  -  |  =  |
       //                          |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-      //                          |  Z  |     |     |     |     |   |  {  |  `  |  ~  |  _  |  +  |
+      //                          |  Z  |     |     |  \  |  |  |   |  {  |  `  |  ~  |  _  |  +  |
       //                                      | TAB | SPC | L1  |   | L4  | BKS | ESC |
       bindings = <
         &kp LS(Q)        &kp LS(W)     &kp LS(E)      &kp RBKT       &kp RBRC  &kp LBKT  &kp DQT        &kp SQT        &kp MINUS       &kp EQUAL
         &pht LSHIFT EXCL &pht LCTRL AT &pht LALT HASH &pht LGUI DLLR &kp PRCNT &kp CARET &pht RGUI AMPS &pht RALT STAR &pht RCTRL LPAR &pht RSHIFT RPAR
-        &kp LS(Z)        &none         &none          &none          &none     &kp LBRC  &kp GRAVE      &kp TILDE      &kp UNDER       &kp PLUS
+        &kp LS(Z)        &none         &kp BACKSLASH  &kp PIPE       &kp PIPE  &kp LBRC  &kp GRAVE      &kp TILDE      &kp UNDER       &kp PLUS
                                        &trans         &trans         &trans    &trans    &trans         &trans
       >;
     };
@@ -76,12 +76,12 @@
       //                          -----------------------------------------------------------------
       //                          |  "  |  <  |  >  |  =  |  +  |   |  /  |  _  |  -  |  [  |  ]  |
       //                          |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-      //                          |  :  |     |     |     |     |   |  ?  |  `  |  ~  |  {  |  }  |
+      //                          |  :  |     |     |  \  |  |  |   |  ?  |  `  |  ~  |  {  |  }  |
       //                                      | TAB | SPC | L3  |   | L5  | BKS | ESC |
       bindings = <
         &kp DQT          &kp LT        &kp GT         &kp EQUAL      &kp PLUS  &kp SLASH &kp UNDER      &kp MINUS      &kp LBKT        &kp RBKT
         &pht LSHIFT EXCL &pht LCTRL AT &pht LALT HASH &pht LGUI DLLR &kp PRCNT &kp CARET &pht RGUI AMPS &pht RALT STAR &pht RCTRL LPAR &pht RSHIFT RPAR
-        &kp COLON        &none         &none          &none          &none     &kp LBRC  &kp GRAVE      &kp TILDE      &kp UNDER       &kp PLUS
+        &kp COLON        &none         &kp BACKSLASH  &kp PIPE       &none     &kp LBRC  &kp GRAVE      &kp TILDE      &kp UNDER       &kp PLUS
                                        &trans         &trans         &trans    &trans    &trans         &trans
       >;
     };
@@ -90,12 +90,12 @@
       label = "NUMBER";
       //                          -----------------------------------------------------------------
       //                          | BT1 | BT2 | BT3 | BT4 | BT5 |   | L2  |     |  ↑  |     |     |
-      //                          |     |     |     |     |     |   |     |  ←  |  ↓  |  →  |     |
+      //                          |     |     |     |     |     |   |     |  ←  |  ↓  |  →  | CAP |
       //                          |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
       //                                      | TAB | SPC |     |   |     | BKS | ESC |
       bindings = <
         &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &to 2   &none          &kp UP         &none            &none
-        &kp LSHIFT   &kp LCTRL    &kp LALT     &kp LGUI     &none        &none   &pht RGUI LEFT &pht RALT DOWN &pht RCTRL RIGHT &pht RSHIFT CAPS
+        &kp LSHIFT   &kp LCTRL    &kp LALT     &kp LGUI     &none        &none   &pht RGUI LEFT &pht RALT DOWN &pht RCTRL RIGHT &pht RSHIFT CAPSLOCK
         &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6  &kp N7         &kp N8         &kp N9           &kp N0
                                   &trans       &trans       &trans       &trans  &trans         &trans
       >;
