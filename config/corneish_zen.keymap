@@ -51,7 +51,7 @@
       bindings = <
         &kp LS(Q)        &kp LS(W)     &kp LS(E)      &kp RBKT       &kp RBRC  &kp LBKT  &kp DQT        &kp SQT        &kp MINUS       &kp EQUAL
         &pht LSHIFT EXCL &pht LCTRL AT &pht LALT HASH &pht LGUI DLLR &kp PRCNT &kp CARET &pht RGUI AMPS &pht RALT STAR &pht RCTRL LPAR &pht RSHIFT RPAR
-        &kp LS(Z)        &none         &kp none       &kp BACKSLASH  &kp PIPE  &kp LBRC  &kp GRAVE      &kp TILDE      &kp UNDER       &kp PLUS
+        &kp LS(Z)        &none         &none          &kp BACKSLASH  &kp PIPE  &kp LBRC  &kp GRAVE      &kp TILDE      &kp UNDER       &kp PLUS
                                        &trans         &trans         &trans    &trans    &trans         &trans
       >;
     };
