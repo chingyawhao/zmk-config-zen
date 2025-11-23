@@ -28,122 +28,107 @@
 
     qwerty {
       label = "QWERTY";
-      //        -----------------------------------------------------------------
-      //        |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |
-      //        |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |
-      //        |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |
-      //                    | TAB | SPC | L1  |   | L4  | BKS | ESC |
+      //                          -----------------------------------------------------------------
+      //                          |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |
+      //                          |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |
+      //                          |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |
+      //                                      | TAB | SPC | L1  |   | L5  | BKS | ESC |
       bindings = <
-        &kp Q  &kp W  &kp E   &kp R     &kp T     &kp Y     &kp U    &kp I     &kp O   &kp P
-        &kp A  &kp S  &kp D   &kp F     &kp G     &kp H     &kp J    &kp K     &kp L   &kp SEMI
-        &kp Z  &kp X  &kp C   &kp V     &kp B     &kp N     &kp M    &kp COMMA &kp DOT &kp FSLH
-                      &kp TAB &kp SPACE &lt 1 RET &lt 4 RET &kp BKSP &kp ESC
+        &kp Q         &kp W        &kp E       &kp R       &kp T     &kp Y     &kp U       &kp I       &kp O        &kp P
+        &pht LSHIFT A &pht LCTRL S &pht LALT D &pht LGUI F &kp G     &kp H     &pht LGUI J &pht LALT K &pht LCTRL L &pht LSHIFT SEMI
+        &kp Z         &kp X        &kp C       &kp V       &kp B     &kp N     &kp M       &kp COMMA   &kp DOT      &kp FSLH
+                                   &kp TAB     &kp SPACE   &lt 1 RET &lt 5 RET &kp BKSP    &kp ESC
       >;
     };
 
     qwerty_symbol {
       label = "SYMBOL";
-      //        -----------------------------------------------------------------
-      //        |  Q  |  W  |  E  |  ]  |  }  |   |  [  |  "  |  '  |  -  |  =  |
-      //        |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-      //        |  Z  |     |     |  \  |  |  |   |  {  |  `  |  ~  |  _  |  +  |
-      //                    | TAB | SPC | L1  |   | L4  | BKS | ESC |
+      //                          -----------------------------------------------------------------
+      //                          |  Q  |  W  |  E  |  ]  |  }  |   |  [  |  "  |  '  |  -  |  =  |
+      //                          |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
+      //                          |  Z  |     |     |  \  |  |  |   |  {  |  `  |  ~  |  _  |  +  |
+      //                                      | TAB | SPC | L1  |   | L5  | BKS | ESC |
       bindings = <
-        &kp LS(Q) &kp LS(W) &kp LS(E) &kp RBKT       &kp RBRC  &kp LBKT  &kp DQT   &kp SQT   &kp MINUS &kp EQUAL
-        &kp EXCL  &kp AT    &kp HASH  &kp DLLR       &kp PRCNT &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
-        &kp LS(Z) &none     &none     &kp BACKSLASH  &kp PIPE  &kp LBRC  &kp GRAVE &kp TILDE &kp UNDER &kp PLUS
-                            &trans    &trans         &trans    &trans    &trans    &trans
+        &kp LS(Q)        &kp LS(W)     &kp LS(E)      &kp RBKT       &kp RBRC  &kp LBKT  &kp DQT        &kp SQT        &kp MINUS       &kp EQUAL
+        &pht LSHIFT EXCL &pht LCTRL AT &pht LALT HASH &pht LGUI DLLR &kp PRCNT &kp CARET &pht RGUI AMPS &pht RALT STAR &pht RCTRL LPAR &pht RSHIFT RPAR
+        &kp LS(Z)        &none         &none          &kp BACKSLASH  &kp PIPE  &kp LBRC  &kp GRAVE      &kp TILDE      &kp UNDER       &kp PLUS
+                                       &trans         &trans         &trans    &trans    &trans         &trans
       >;
     };
 
-    // qwerty {
-    //   label = "QWERTY";
-    //   //                          -----------------------------------------------------------------
-    //   //                          |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |
-    //   //                          |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |
-    //   //                          |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |
-    //   //                                      | TAB | SPC | L1  |   | L4  | BKS | ESC |
-    //   bindings = <
-    //     &kp Q         &kp W        &kp E       &kp R       &kp T     &kp Y     &kp U       &kp I       &kp O        &kp P
-    //     &pht LSHIFT A &pht LCTRL S &pht LALT D &pht LGUI F &kp G     &kp H     &pht LGUI J &pht LALT K &pht LCTRL L &pht LSHIFT SEMI
-    //     &kp Z         &kp X        &kp C       &kp V       &kp B     &kp N     &kp M       &kp COMMA   &kp DOT      &kp FSLH
-    //                                &kp TAB     &kp SPACE   &lt 1 RET &lt 4 RET &kp BKSP    &kp ESC
-    //   >;
-    // };
+    dvorak {
+      label = "DVORAK";
+      //                          -----------------------------------------------------------------
+      //                          |  '  |  ,  |  .  |  P  |  Y  |   |  F  |  G  |  C  |  R  |  L  |
+      //                          |  A  |  O  |  E  |  U  |  I  |   |  D  |  H  |  T  |  N  |  S  |
+      //                          |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  |
+      //                                      | TAB | SPC | L3  |   | L6  | BKS | ESC |
+      bindings = <
+        &kp SQT       &kp COMMA    &kp DOT     &kp P       &kp Y     &kp F     &kp G       &kp C       &kp R        &kp L
+        &pht LSHIFT A &pht LCTRL O &pht LALT E &pht LGUI U &kp I     &kp D     &pht RGUI H &pht RALT T &pht RCTRL N &pht RSHIFT S
+        &kp SEMI      &kp Q        &kp J       &kp K       &kp X     &kp B     &kp M       &kp W       &kp V        &kp Z
+                                   &kp TAB     &kp SPACE   &lt 3 RET &lt 6 RET &kp BKSP    &kp ESC
+      >;
+    };
 
-    // qwerty_symbol {
-    //   label = "SYMBOL";
-    //   //                          -----------------------------------------------------------------
-    //   //                          |  Q  |  W  |  E  |  ]  |  }  |   |  [  |  "  |  '  |  -  |  =  |
-    //   //                          |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-    //   //                          |  Z  |     |     |  \  |  |  |   |  {  |  `  |  ~  |  _  |  +  |
-    //   //                                      | TAB | SPC | L1  |   | L4  | BKS | ESC |
-    //   bindings = <
-    //     &kp LS(Q)        &kp LS(W)     &kp LS(E)      &kp RBKT       &kp RBRC  &kp LBKT  &kp DQT        &kp SQT        &kp MINUS       &kp EQUAL
-    //     &pht LSHIFT EXCL &pht LCTRL AT &pht LALT HASH &pht LGUI DLLR &kp PRCNT &kp CARET &pht RGUI AMPS &pht RALT STAR &pht RCTRL LPAR &pht RSHIFT RPAR
-    //     &kp LS(Z)        &none         &none          &kp BACKSLASH  &kp PIPE  &kp LBRC  &kp GRAVE      &kp TILDE      &kp UNDER       &kp PLUS
-    //                                    &trans         &trans         &trans    &trans    &trans         &trans
-    //   >;
-    // };
+    dvorak_symbol {
+      label = "SYMBOL";
+      //                          -----------------------------------------------------------------
+      //                          |  "  |  <  |  >  |  =  |  +  |   |  /  |  _  |  -  |  [  |  ]  |
+      //                          |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
+      //                          |  :  |     |     |  \  |  |  |   |  ?  |  `  |  ~  |  {  |  }  |
+      //                                      | TAB | SPC | L3  |   | L6  | BKS | ESC |
+      bindings = <
+        &kp DQT          &kp LT        &kp GT         &kp EQUAL      &kp PLUS  &kp SLASH &kp UNDER      &kp MINUS      &kp LBKT        &kp RBKT
+        &pht LSHIFT EXCL &pht LCTRL AT &pht LALT HASH &pht LGUI DLLR &kp PRCNT &kp CARET &pht RGUI AMPS &pht RALT STAR &pht RCTRL LPAR &pht RSHIFT RPAR
+        &kp COLON        &none         &none          &kp BACKSLASH  &kp PIPE  &kp LBRC  &kp GRAVE      &kp TILDE      &kp UNDER       &kp PLUS
+                                       &trans         &trans         &trans    &trans    &trans         &trans
+      >;
+    };
 
-    // dvorak {
-    //   label = "DVORAK";
-    //   //                          -----------------------------------------------------------------
-    //   //                          |  '  |  ,  |  .  |  P  |  Y  |   |  F  |  G  |  C  |  R  |  L  |
-    //   //                          |  A  |  O  |  E  |  U  |  I  |   |  D  |  H  |  T  |  N  |  S  |
-    //   //                          |  ;  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  |
-    //   //                                      | TAB | SPC | L3  |   | L5  | BKS | ESC |
-    //   bindings = <
-    //     &kp SQT       &kp COMMA    &kp DOT     &kp P       &kp Y     &kp F     &kp G       &kp C       &kp R        &kp L
-    //     &pht LSHIFT A &pht LCTRL O &pht LALT E &pht LGUI U &kp I     &kp D     &pht RGUI H &pht RALT T &pht RCTRL N &pht RSHIFT S
-    //     &kp SEMI      &kp Q        &kp J       &kp K       &kp X     &kp B     &kp M       &kp W       &kp V        &kp Z
-    //                                &kp TAB     &kp SPACE   &lt 3 RET &lt 5 RET &kp BKSP    &kp ESC
-    //   >;
-    // };
+    gaming {
+      label = "GAMING";
+      //                          -----------------------------------------------------------------
+      //                          |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |
+      //                          |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |
+      //                          |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  |
+      //                                      | TAB | SPC | L1  |   | L5  | BKS | ESC |
+      bindings = <
+        &kp Q  &kp W  &kp E   &kp R     &kp T     &kp Y     &kp U    &kp I     &kp O   &kp P
+        &kp A  &kp S  &kp D   &kp F     &kp G     &kp H     &kp J    &kp K     &kp L   &kp SEMI
+        &kp Z  &kp X  &kp C   &kp V     &kp B     &kp N     &kp M    &kp COMMA &kp DOT &kp FSLH
+                      &kp TAB &kp SPACE &lt 1 RET &lt 5 RET &kp BKSP &kp ESC
+      >;
+    };
 
-    // dvorak_symbol {
-    //   label = "SYMBOL";
-    //   //                          -----------------------------------------------------------------
-    //   //                          |  "  |  <  |  >  |  =  |  +  |   |  /  |  _  |  -  |  [  |  ]  |
-    //   //                          |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-    //   //                          |  :  |     |     |  \  |  |  |   |  ?  |  `  |  ~  |  {  |  }  |
-    //   //                                      | TAB | SPC | L3  |   | L5  | BKS | ESC |
-    //   bindings = <
-    //     &kp DQT          &kp LT        &kp GT         &kp EQUAL      &kp PLUS  &kp SLASH &kp UNDER      &kp MINUS      &kp LBKT        &kp RBKT
-    //     &pht LSHIFT EXCL &pht LCTRL AT &pht LALT HASH &pht LGUI DLLR &kp PRCNT &kp CARET &pht RGUI AMPS &pht RALT STAR &pht RCTRL LPAR &pht RSHIFT RPAR
-    //     &kp COLON        &none         &none          &kp BACKSLASH  &kp PIPE  &kp LBRC  &kp GRAVE      &kp TILDE      &kp UNDER       &kp PLUS
-    //                                    &trans         &trans         &trans    &trans    &trans         &trans
-    //   >;
-    // };
+    qwerty_number {
+      label = "NUMBER";
+      //                          -----------------------------------------------------------------
+      //                          | BT1 | BT2 | BT3 | BT4 | BT5 |   | L2  | L4  |  ↑  |     |     |
+      //                          |     |     |     |     |     |   |     |  ←  |  ↓  |  →  | CAP |
+      //                          |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
+      //                                      | TAB | SPC |     |   |     | BKS | ESC |
+      bindings = <
+        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &to 2   &to 4    &kp UP   &none     &none
+        &kp LSHIFT   &kp LCTRL    &kp LALT     &kp LGUI     &none        &none   &kp LEFT &kp DOWN &kp RIGHT &kp CAPSLOCK
+        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6  &kp N7   &kp N8   &kp N9    &kp N0
+                                  &trans       &trans       &trans       &trans  &trans   &trans
+      >;
+    };
 
-    // qwerty_number {
-    //   label = "NUMBER";
-    //   //                          -----------------------------------------------------------------
-    //   //                          | BT1 | BT2 | BT3 | BT4 | BT5 |   | L2  |     |  ↑  |     |     |
-    //   //                          |     |     |     |     |     |   |     |  ←  |  ↓  |  →  | CAP |
-    //   //                          |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
-    //   //                                      | TAB | SPC |     |   |     | BKS | ESC |
-    //   bindings = <
-    //     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &to 2   &none    &kp UP   &none     &none
-    //     &kp LSHIFT   &kp LCTRL    &kp LALT     &kp LGUI     &none        &none   &kp LEFT &kp DOWN &kp RIGHT &kp CAPSLOCK
-    //     &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6  &kp N7   &kp N8   &kp N9    &kp N0
-    //                               &trans       &trans       &trans       &trans  &trans   &trans
-    //   >;
-    // };
-
-    // dvorak_number {
-    //   label = "NUMBER";
-    //   //                          -----------------------------------------------------------------
-    //   //                          | BT1 | BT2 | BT3 | BT4 | BT5 |   | L0  |     |  ↑  |     |     |
-    //   //                          |     |     |     |     |     |   |     |  ←  |  ↓  |  →  |     |
-    //   //                          |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
-    //   //                                      | TAB | SPC |     |   |     | BKS | ESC |
-    //   bindings = <
-    //     &trans   &trans   &trans   &trans   &trans   &to 0    &trans   &trans   &trans   &trans
-    //     &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
-    //     &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
-    //                       &trans   &trans   &trans   &trans   &trans   &trans
-    //   >;
-    // };
+    dvorak_number {
+      label = "NUMBER";
+      //                          -----------------------------------------------------------------
+      //                          | BT1 | BT2 | BT3 | BT4 | BT5 |   | L0  | L4  |  ↑  |     |     |
+      //                          |     |     |     |     |     |   |     |  ←  |  ↓  |  →  |     |
+      //                          |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
+      //                                      | TAB | SPC |     |   |     | BKS | ESC |
+      bindings = <
+        &trans   &trans   &trans   &trans   &trans   &to 0    &trans   &trans   &trans   &trans
+        &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
+        &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
+                          &trans   &trans   &trans   &trans   &trans   &trans
+      >;
+    };
   };
 };
